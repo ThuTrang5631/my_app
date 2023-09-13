@@ -1,0 +1,10 @@
+.btn {
+  @include textSemiBold($white, 20px);
+  background-color: $primary2;
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  text-align: center;
+}

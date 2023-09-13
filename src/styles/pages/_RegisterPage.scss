@@ -1,0 +1,107 @@
+.registerpage {
+  @include flexColumn();
+  align-items: center;
+  justify-content: center;
+
+  .register__section {
+    padding: 30px;
+    background-color: $white;
+    border-radius: 20px;
+    border: 1px solid $border;
+    width: 80%;
+  }
+
+  .register__title {
+    @include textExtraBold($black, 30px);
+    margin-bottom: 20px;
+  }
+
+  .register__desc {
+    @include textLight($primary1, 23px);
+    margin-bottom: 30px;
+  }
+
+  .register__wrapinput {
+    @include flexColumn();
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      margin-bottom: 15px;
+      @include textSemiBold($black, 25px);
+    }
+  }
+
+  .register__input {
+    padding: 15px;
+  }
+
+  .register__wrappassword {
+    @include flexRow();
+    margin-bottom: 25px;
+  }
+
+  .register__password {
+    margin-bottom: 0;
+  }
+
+  .register__password {
+    width: 50%;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .register__wrapbtn {
+    @include flexRow;
+    justify-content: center;
+  }
+
+  .register__form {
+    margin-bottom: 30px;
+  }
+
+  .register__bottomdesc {
+    @include flexRow();
+    @include textSemiBold($black, 20px);
+    justify-content: center;
+
+    a {
+      margin-left: 5px;
+      color: $primary2;
+    }
+  }
+
+  .register__input {
+    @include textLight($black, 20px);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .registerpage {
+    .register__section {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .registerpage {
+    .register__wrappassword {
+      @include flexColumn();
+    }
+
+    .register__password {
+      width: 100%;
+    }
+
+    .register__section {
+      width: 100%;
+    }
+  }
+}

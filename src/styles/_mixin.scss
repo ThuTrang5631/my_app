@@ -1,0 +1,38 @@
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin overflowText($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin textExtraBold($color, $size) {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin textSemiBold($color, $size) {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  color: $color;
+  font-size: $size;
+}
+
+@mixin textLight($color, $size) {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  color: $color;
+  font-size: $size;
+}

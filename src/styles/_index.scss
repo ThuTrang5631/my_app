@@ -1,0 +1,85 @@
+@import "./mixin";
+@import "./variables";
+@import "./pages/LoginPage";
+@import "./pages/RegisterPage";
+@import "./pages/DashboardPage";
+@import "./pages/ProductDetailPage";
+@import "./components/Button";
+@import "./components/Modal";
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__container {
+  background-color: $bg-primary;
+  min-height: 100vh;
+}
+
+.error {
+  @include textLight($primary3, 15px);
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapcontent {
+  padding-top: 120px;
+  padding-inline: 30px;
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .wrapcontent {
+    padding-inline: 20px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .wrapcontent {
+    padding-inline: 15px;
+  }
+}

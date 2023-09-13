@@ -1,0 +1,165 @@
+.productdetail {
+  padding-bottom: 40px;
+
+  .productdetail__wrapcontent {
+    @include flexRow();
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+
+    border-radius: 10px;
+  }
+
+  .productdetail__title {
+    @include textSemiBold($black, 30px);
+    width: 100%;
+  }
+
+  .productdetail__containright {
+    @include flexColumn();
+    width: 50%;
+    padding-right: 50px;
+    border-right: 0.5px solid $primary1;
+  }
+
+  .productdetail__wrapimage::-webkit-scrollbar {
+    display: none;
+  }
+
+  .productdetail__content {
+    width: 50%;
+    padding-left: 30px;
+  }
+
+  .productdetail__titledesc {
+    @include textSemiBold($black, 20px);
+    margin-bottom: 20px;
+  }
+
+  .productdetail__wrapdesc {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    input,
+    textarea {
+      padding: 10px 20px;
+      border: 0.5px solid $primary1;
+      border-radius: 10px;
+    }
+  }
+
+  .productdetail__btnedit {
+    margin-bottom: 40px;
+    @include flexRow();
+    justify-content: flex-end;
+
+    button {
+      border: none;
+      outline: none;
+      @include textSemiBold($white, 20px);
+      background-color: $primary2;
+      border-radius: 6px;
+      padding: 10px 20px;
+    }
+  }
+
+  .productdetail__btns {
+    @include flexRow();
+    justify-content: flex-end;
+    margin-top: 40px;
+
+    button {
+      padding: 10px 20px;
+      margin-right: 30px;
+      border-radius: 6px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .productdetail__uploadbtn {
+    margin-top: 40px;
+
+    button {
+      width: 100%;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  .productdetail__btncancel {
+    color: $primary2;
+    border: 0.5px solid $primary2;
+    @include textSemiBold($primary2, 25px);
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $primary2;
+    }
+  }
+
+  .productdetail__btnsave {
+    @include textSemiBold($white, 25px);
+    background-color: $primary2;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .productdetail__btnphoto {
+    @include textSemiBold($primary2, 25px);
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid $primary2;
+
+    &:hover {
+      background-color: $primary2;
+      color: $white;
+    }
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    color: $black;
+  }
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .productdetail__img {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  .productdetail {
+    .productdetail__wrapcontent {
+      @include flexColumn();
+    }
+
+    .productdetail__containright {
+      width: 100%;
+      border-right: none;
+      padding-right: 0;
+      margin-bottom: 50px;
+    }
+
+    .productdetail__content {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+}
